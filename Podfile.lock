@@ -1,0 +1,60 @@
+PODS:
+  - _SwiftUINavigationState (0.4.2):
+    - CasePaths
+    - CustomDump
+  - CasePaths (0.10.1)
+  - Clocks (0.2.0):
+    - XCTestDynamicOverlay
+  - CombineSchedulers (0.9.1):
+    - XCTestDynamicOverlay
+  - ComposableArchitecture (0.47.2):
+    - _SwiftUINavigationState
+    - CasePaths
+    - CombineSchedulers
+    - ComposableArchitectureDependencies
+    - CustomDump
+    - IdentifiedCollections
+    - XCTestDynamicOverlay
+  - ComposableArchitectureDependencies (0.47.2):
+    - Clocks
+    - CombineSchedulers
+    - XCTestDynamicOverlay
+  - CustomDump (0.6.1):
+    - XCTestDynamicOverlay
+  - IdentifiedCollections (0.5.0):
+    - OrderedCollections
+  - OrderedCollections (1.0.4)
+  - XCTestDynamicOverlay (0.6.0)
+
+DEPENDENCIES:
+  - ComposableArchitecture
+
+SPEC REPOS:
+  https://github.com/kids-ground/tca-podspecs.git:
+    - _SwiftUINavigationState
+    - CasePaths
+    - Clocks
+    - CombineSchedulers
+    - ComposableArchitecture
+    - ComposableArchitectureDependencies
+    - CustomDump
+    - IdentifiedCollections
+    - XCTestDynamicOverlay
+  trunk:
+    - OrderedCollections
+
+SPEC CHECKSUMS:
+  _SwiftUINavigationState: 22305fc02db8d2dc7f1d3f696a1799bec14fa658
+  CasePaths: deb1826520958a4c36daf0953aada4a3f4fd0d10
+  Clocks: 6afed84ef7848b1278bcd0acf9bb638b3fd92132
+  CombineSchedulers: dc36b0ef40e74d636c7beb87301c5d829495ce5b
+  ComposableArchitecture: f965320b99b1d9dddebc879ff2bca3a7b33d7b22
+  ComposableArchitectureDependencies: 04f3ec52768a0cf0fe4a2cca5d11027817f9cfe4
+  CustomDump: f8e162466bfac992cf059de159fad85aa59cde49
+  IdentifiedCollections: a52a8c45768e0bda9efb3b0eb7b686d1037d4c86
+  OrderedCollections: c754ce5f9e42cf22b73afd73582317347903ab6d
+  XCTestDynamicOverlay: 1349e196f84912ad6dc3067ea2bd3c9528ee7b15
+
+PODFILE CHECKSUM: ce894ef2b53589701be833dbdf8665ba852ff0c9
+
+COCOAPODS: 1.12.1
