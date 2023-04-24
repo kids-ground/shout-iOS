@@ -7,67 +7,37 @@
 
 import SwiftUI
 
+enum Tab {
+  case home
+  case bookmark
+  case user
+}
+
 struct MainView: View {
-  enum Tab {
-    case home
-    case bookmark
-    case setting
-  }
-  
-  init() {
-    UITabBar.appearance().unselectedItemTintColor = UIColor.darkGray
-    UITabBar.appearance().backgroundColor = UIColor.black
-  }
   
   @State private var tabSelection = Tab.home
   
   
   var body: some View {
-    
     NavigationView {
       TabView(selection: $tabSelection) {
         HomeView()
-          .clipped()
           .background(Color.dark700)
           .tag(Tab.home)
-          .tabItem{
-            VStack {
-              Image("home")
-                .renderingMode(.template)
-                .imageScale(.large)
-              Text("홈")
-            }
-          }
-          
         
-        Text("즐겨찾기")
+        BookmarkView()
           .background(Color.dark700)
-          .tag(Tab.home)
-          .tabItem{
-            VStack {
-              Image("bookmark")
-                .renderingMode(.template)
-                .imageScale(.large)
-              Text("즐겨찾기")
-            }
-            
-          }
+          .tag(Tab.bookmark)
         
-        Text("설정")
+        ProfileView()
           .background(Color.dark700)
-          .tag(Tab.home)
-          .tabItem{
-            VStack {
-              Image("user")
-                .renderingMode(.template)
-                .imageScale(.large)
-              Text("프로필")
-            }
-            
-          }
+          .tag(Tab.user)
       }
       .accentColor(.white)
-      
+      .overlay(alignment: .bottom) {
+        TabBarView()
+      }
+      .edgesIgnoringSafeArea(.all)
     }
     .navigationViewStyle(.stack)
     .navigationBarHidden(false)
