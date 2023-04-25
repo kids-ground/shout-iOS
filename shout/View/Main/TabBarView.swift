@@ -6,50 +6,55 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct TabBarView: View {
+  let store: StoreOf<TabBarCore>
   
   var body: some View {
-    HStack(alignment: .top) {
-      TabBarButton(title: "홈", imageName: "home")
-      TabBarButton(title: "저장", imageName: "bookmark")
-      TabBarButton(title: "설정", imageName: "user")
+    WithViewStore(self.store, observe: { $0 }) { viewStore in
+      HStack(alignment: .top) {
+        ForEach(TabBarItem.allCases, id: \.self) { tag in
+          self.tabBarButton(
+            tag: tag,
+            viewStore: viewStore
+          )
+        }
+      }
+      .padding(.horizontal, 24)
+      .padding(.vertical, 8)
+      .frame(maxWidth: .infinity, maxHeight: 85, alignment: .top)
+      .background(.ultraThinMaterial)
+      .cornerRadius(16, corners: [.topLeft, .topRight])
     }
-    .padding(.horizontal, 24)
-    .padding(.vertical, 8)
-    .frame(maxWidth: .infinity, maxHeight: 85, alignment: .top)
-    .background(.ultraThinMaterial)
-    .cornerRadius(16, corners: [.topLeft, .topRight])
   }
-}
-
-struct TabBarButton: View {
-  var title: String
-  var imageName: String
   
-  
-  var body: some View {
+  func tabBarButton(
+    tag: TabBarItem,
+    viewStore: ViewStore<TabBarCore.State, TabBarCore.Action>
+  ) -> some View {
     Button {
-      
+      if viewStore.selectedTab != tag {
+        viewStore.send(.selectedTabChange(tag))
+      }
     } label: {
       VStack {
-        Image(imageName)
+        Image(tag.imageName)
           .renderingMode(.template)
           .resizable()
           .scaledToFit()
           .frame(height: 28)
-        Text(title)
+        Text(tag.title)
           .font(.system(size: 10))
       }
       .frame(maxWidth: .infinity)
-      .foregroundColor(.white)
+      .foregroundColor(viewStore.selectedTab == tag ? .white : .dark700)
     }
   }
-  
 }
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+      TabBarView(store: Store(initialState: TabBarCore.State(), reducer: TabBarCore()))
     }
 }
