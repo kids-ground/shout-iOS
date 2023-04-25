@@ -6,47 +6,54 @@
 //
 
 import SwiftUI
-
-enum Tab {
-  case home
-  case bookmark
-  case user
-}
+import ComposableArchitecture
 
 struct MainView: View {
-  
-  @State private var tabSelection = Tab.home
-  
+  let store: StoreOf<MainCore>
   
   var body: some View {
-    NavigationView {
-      TabView(selection: $tabSelection) {
-        HomeView()
-          .background(Color.dark700)
-          .tag(Tab.home)
-        
-        BookmarkView()
-          .background(Color.dark700)
-          .tag(Tab.bookmark)
-        
-        ProfileView()
-          .background(Color.dark700)
-          .tag(Tab.user)
+    WithViewStore(self.store, observe: { $0 }) { viewStore in
+      NavigationView {
+        TabView(selection: viewStore.binding(
+          get: \.tabBarState.selectedTab,
+          send: MainCore.Action.selectTab)
+        ) {
+          HomeView()
+            .background(Color.dark700)
+            .tag(TabBarItem.home)
+          
+          BookmarkView()
+            .background(Color.dark700)
+            .tag(TabBarItem.bookmark)
+          
+          ProfileView()
+            .background(Color.dark700)
+            .tag(TabBarItem.setting)
+        }
+        .accentColor(.white)
+        .overlay(alignment: .bottom) {
+          TabBarView(
+            store: store.scope(
+              state: \.tabBarState,
+              action: MainCore.Action.tabBarAction
+            )
+          )
+        }
+        .edgesIgnoringSafeArea(.all)
       }
-      .accentColor(.white)
-      .overlay(alignment: .bottom) {
-        TabBarView()
-      }
-      .edgesIgnoringSafeArea(.all)
+      .navigationViewStyle(.stack)
+      .navigationBarHidden(false)
     }
-    .navigationViewStyle(.stack)
-    .navigationBarHidden(false)
   }
 }
 
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    MainView()
+    MainView(store: Store(
+      initialState: MainCore.State(),
+      reducer: MainCore()
+      )
+    )
     .preferredColorScheme(.dark)
   }
 }
