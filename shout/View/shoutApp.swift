@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct shoutApp: App {
@@ -13,7 +14,10 @@ struct shoutApp: App {
   
   var body: some Scene {
     WindowGroup {
-      MainView()
+      MainView(store: Store(
+        initialState: MainCore.State(),
+        reducer: MainCore())
+      )
         .preferredColorScheme(.dark)
         .background(Color.dark700)
     }
