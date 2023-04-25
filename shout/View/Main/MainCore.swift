@@ -8,22 +8,24 @@
 import SwiftUI
 import ComposableArchitecture
 
-
-struct MainState: Equatable {
-  
-  
-}
-
-enum MainAction: Equatable {
-  
-}
-
-struct MainEnvironment {
-  
-}
-
-let mainReducer: Reducer<MainState, MainAction, MainEnvironment> = .combine(
-  .init { state, conbine, env in
-    return .none
+struct MainCore: ReducerProtocol {
+  struct State: Equatable {
+    var tabBarState = TabBarCore.State()
   }
-)
+  
+  enum Action: Equatable {
+    case tabBarAction(TabBarCore.Action)
+    case selectTab(TabBarItem)
+  }
+  
+  var body: some ReducerProtocol<State, Action> {
+    Scope(state: \.tabBarState, action: /Action.tabBarAction) {
+      TabBarCore()
+    }
+    Reduce { state, action in
+      return .none
+    }
+  }
+}
+
+
