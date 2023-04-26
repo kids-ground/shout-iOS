@@ -16,6 +16,34 @@ struct HomeView: View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
       ScrollView {
         LazyVStack {
+          Section {
+            HStack(alignment: .top, spacing: 8) {
+              writeButton(
+                imageName: "heart",
+                imageColor: .pink,
+                title: "외침",
+                description: "그때, 하지 못했던 이야기"
+              ) {
+                
+              }
+              
+              Spacer().frame(maxWidth: 0)
+              
+              writeButton(
+                imageName: "star",
+                imageColor: .yellow,
+                title: "명언",
+                description: "당신의 인생철학은?"
+              ) {
+                
+              }
+            }
+          } header: {
+            VStack{}.frame(height: 16)
+          }
+          .padding(.horizontal, 24)
+          .frame(maxWidth: .infinity, alignment: .center)
+          
           ForEach(0..<10) {_ in
             Text("Hello World")
               .frame(height: 300)
@@ -55,6 +83,46 @@ struct HomeView: View {
         }
       }
     }
+  }
+  
+  
+  func writeButton(
+    imageName: String,
+    imageColor: Color,
+    title: String,
+    description: String,
+    action: @escaping () -> Void
+  ) -> some View {
+    Button{
+      action()
+    } label: {
+      VStack(spacing: 16) {
+        ZStack(alignment: .center) {
+          Circle().frame(width: 55)
+            .foregroundColor(imageColor)
+          Image(imageName)
+            .renderingMode(.template)
+            .resizable()
+            .scaledToFit()
+            .frame(height: 35)
+            .foregroundColor(.white)
+        }
+        .fixedSize()
+        
+        Text(title)
+          .foregroundColor(.white)
+          .font(.system(size: 20))
+          .fontWeight(.bold)
+        
+        Text(description)
+          .foregroundColor(.white)
+          .multilineTextAlignment(.center)
+      }
+      .padding(20)
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    .background(Color.dark500)
+    .cornerRadius(16)
   }
 }
 
