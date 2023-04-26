@@ -19,13 +19,13 @@ struct HomeCore: ReducerProtocol {
     case scrollDebounceCompleted(CGFloat)
   }
   
-  struct DebounceId: Hashable {}
+  struct ThrottleId: Hashable {}
   
   func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
     switch action {
     case .mainListScrolled(let offsetY):
       return .task { .scrollDebounceCompleted(offsetY) }
-      .throttle(id: DebounceId(), for: 0.3, scheduler: DispatchQueue.main, latest: true)
+      .throttle(id: ThrottleId(), for: 0.3, scheduler: DispatchQueue.main, latest: true)
     case .scrollDebounceCompleted(let offsetY):
       if state.isHeaderTransParent != (offsetY >= 10) {
         state.isHeaderTransParent.toggle()
