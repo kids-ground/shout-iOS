@@ -11,16 +11,22 @@ import ComposableArchitecture
 struct MainCore: ReducerProtocol {
   struct State: Equatable {
     var tabBarState = TabBarCore.State()
+    var homeState = HomeCore.State()
   }
   
   enum Action: Equatable {
     case tabBarAction(TabBarCore.Action)
+    case homeAction(HomeCore.Action)
+    
     case selectTab(TabBarItem)
   }
   
   var body: some ReducerProtocol<State, Action> {
     Scope(state: \.tabBarState, action: /Action.tabBarAction) {
       TabBarCore()
+    }
+    Scope(state: \.homeState, action: /Action.homeAction) {
+      HomeCore()
     }
     Reduce { state, action in
       return .none

@@ -13,12 +13,17 @@ struct MainView: View {
   
   var body: some View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
-      NavigationView {
+      NavigationStack {
         TabView(selection: viewStore.binding(
           get: \.tabBarState.selectedTab,
           send: MainCore.Action.selectTab)
         ) {
-          HomeView()
+          HomeView(
+            store: store.scope(
+              state: \.homeState,
+              action: MainCore.Action.homeAction
+            )
+          )
             .background(Color.dark700)
             .tag(TabBarItem.home)
           
@@ -39,10 +44,9 @@ struct MainView: View {
             )
           )
         }
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.bottom)
       }
-      .navigationViewStyle(.stack)
-      .navigationBarHidden(false)
+      
     }
   }
 }
