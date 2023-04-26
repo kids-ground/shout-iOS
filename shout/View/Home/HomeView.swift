@@ -22,10 +22,8 @@ struct HomeView: View {
                 imageName: "heart",
                 imageColor: .pink,
                 title: "외침",
-                description: "그때, 하지 못했던 이야기"
-              ) {
-                
-              }
+                description: "그때, 하지\n못했던 이야기"
+              ) { }
               
               Spacer().frame(maxWidth: 0)
               
@@ -33,24 +31,86 @@ struct HomeView: View {
                 imageName: "star",
                 imageColor: .yellow,
                 title: "명언",
-                description: "당신의 인생철학은?"
-              ) {
-                
-              }
+                description: "당신의\n인생철학은?"
+              ) { }
             }
           } header: {
             VStack{}.frame(height: 16)
+          } footer: {
+            VStack{}.frame(height: 32)
           }
           .padding(.horizontal, 24)
           .frame(maxWidth: .infinity, alignment: .center)
           
-          ForEach(0..<10) {_ in
-            Text("Hello World")
-              .frame(height: 300)
-              .listRowSeparator(.hidden)
-              .listRowInsets(.none)
-              .listRowBackground(Color.dark700)
+          Section {
+            ScrollView(.horizontal, showsIndicators: false) {
+              LazyHStack(spacing: 16) {
+                ForEach(0..<10) { data in
+                  
+                  
+                  VStack(alignment: .leading, spacing: 16) {
+                    HStack(spacing: 16) {
+                      AsyncImage(url: URL(string:"https://hws.dev/paul.jpg")) { image in
+                        image.resizable()
+                          .frame(width: 40, height: 40)
+                          .scaledToFit()
+                          .clipShape(Circle())
+                      } placeholder: {
+                        VStack{ }.frame(width: 40, height: 40)
+                      }
+                      Text("빌게이츠")
+                        .fontWeight(.bold)
+                    }
+                    Text("세상에 돈보다 중요한게 있다고? 그건 말이 안되는 소리입니다. 여러분, 사탕발림소리에 속지마세요")
+                      .font(.system(size: 16))
+                      .multilineTextAlignment(.leading)
+                      
+                      .lineLimit(nil)
+                      .lineSpacing(6)
+                    
+                    Spacer()
+                    Divider()
+                    
+                    HStack(alignment: .top, spacing: 16) {
+                      HStack(alignment: .center, spacing: 4) {
+                        Image("heart").renderingMode(.template)
+                          .foregroundColor(.pink)
+                        Text("137")
+                      }
+                      
+                      HStack(alignment: .center, spacing: 4) {
+                        Image("star").renderingMode(.template)
+                          .foregroundColor(.yellow)
+                        Text("124")
+                      }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    
+                  }
+                  .padding(16)
+                  .frame(maxWidth: 250, minHeight: 250, alignment: .topLeading)
+                  .background(Color.dark500)
+                  .cornerRadius(16)
+                  
+                  
+                }
+              }
+              .padding(.horizontal, 24)
+            }
+          } header: {
+            HStack{
+              Text("🔥 Hot 외침")
+                .font(.system(size: 22))
+                .fontWeight(.bold)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 24)
+          } footer: {
+            VStack{}.frame(height: 32)
           }
+          .frame(maxWidth: .infinity, alignment: .center)
+          
+          
         }
         .background(GeometryReader { proxy in
           Color.clear
@@ -115,6 +175,7 @@ struct HomeView: View {
           .fontWeight(.bold)
         
         Text(description)
+          .font(.system(size: 16))
           .foregroundColor(.white)
           .multilineTextAlignment(.center)
       }
