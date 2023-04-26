@@ -25,7 +25,7 @@ struct HomeCore: ReducerProtocol {
     switch action {
     case .mainListScrolled(let offsetY):
       return .task { .scrollDebounceCompleted(offsetY) }
-      .throttle(id: ThrottleId(), for: 0.3, scheduler: DispatchQueue.main, latest: true)
+      .throttle(id: ThrottleId(), for: 0.2, scheduler: DispatchQueue.main, latest: true)
     case .scrollDebounceCompleted(let offsetY):
       if state.isHeaderTransParent != (offsetY >= 10) {
         state.isHeaderTransParent.toggle()
