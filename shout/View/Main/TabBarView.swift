@@ -11,6 +11,16 @@ import ComposableArchitecture
 struct TabBarView: View {
   let store: StoreOf<TabBarCore>
   
+  init(store: StoreOf<TabBarCore>) {
+    self.store = store
+    
+  }
+  
+  private var tabBarHeight: CGFloat {
+    UIApplication.safeAreaInsets.bottom < 10 ?
+      60 : UIApplication.safeAreaInsets.bottom + 50
+  }
+  
   var body: some View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
       HStack(alignment: .top) {
@@ -23,7 +33,7 @@ struct TabBarView: View {
       }
       .padding(.horizontal, 24)
       .padding(.vertical, 8)
-      .frame(maxWidth: .infinity, maxHeight: 85, alignment: .top)
+      .frame(maxWidth: .infinity, maxHeight: self.tabBarHeight, alignment: .top)
       .background(.ultraThinMaterial)
       .cornerRadius(16, corners: [.topLeft, .topRight])
     }
@@ -44,8 +54,9 @@ struct TabBarView: View {
           .resizable()
           .scaledToFit()
           .frame(height: 28)
+          .animation(.easeOut(duration: 0.2), value: viewStore.selectedTab)
         Text(tag.title)
-          .font(.system(size: 10))
+          .font(.system(size: 12))
       }
       .frame(maxWidth: .infinity)
       .foregroundColor(viewStore.selectedTab == tag ? .white : .dark700)
