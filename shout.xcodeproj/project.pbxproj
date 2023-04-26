@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6429F9218000B763B5 /* NavigationBackground.swift */; };
 		09B0D6A729F4FB4100DA08C3 /* shoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */; };
 		09B0D6AB29F4FB4200DA08C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B0D6AA29F4FB4200DA08C3 /* Assets.xcassets */; };
 		09B0D6AE29F4FB4200DA08C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B0D6AD29F4FB4200DA08C3 /* Preview Assets.xcassets */; };
@@ -25,6 +26,9 @@
 		09D1FEF429F67DFF00B65BBF /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1FEF329F67DFF00B65BBF /* MainCore.swift */; };
 		09D1FEF629F6C40D00B65BBF /* TabBarCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1FEF529F6C40D00B65BBF /* TabBarCore.swift */; };
 		09D1FEF829F7B55500B65BBF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1FEF729F7B55500B65BBF /* TabBarItem.swift */; };
+		09D1FEFA29F8DAFE00B65BBF /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1FEF929F8DAFE00B65BBF /* UIApplication+Extension.swift */; };
+		09D1FEFC29F8EE7A00B65BBF /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1FEFB29F8EE7A00B65BBF /* NavigationBar.swift */; };
+		09D1FEFE29F90B1200B65BBF /* HomeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1FEFD29F90B1200B65BBF /* HomeCore.swift */; };
 		21F786E295CE3B6C95C19743 /* Pods_shout_shoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A0662C4DF277CEB6E8B0F4 /* Pods_shout_shoutUITests.framework */; };
 		3EB55349625FD4EEEFF52A09 /* Pods_shout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E979415DA2E455980F588691 /* Pods_shout.framework */; };
 		47FAE37CCEC6FD1210126454 /* Pods_shoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB45100F5D8B69093AAE73F /* Pods_shoutTests.framework */; };
@@ -48,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09647B6429F9218000B763B5 /* NavigationBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackground.swift; sourceTree = "<group>"; };
 		09B0D6A329F4FB4100DA08C3 /* shout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoutApp.swift; sourceTree = "<group>"; };
 		09B0D6AA29F4FB4200DA08C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +74,9 @@
 		09D1FEF329F67DFF00B65BBF /* MainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCore.swift; sourceTree = "<group>"; };
 		09D1FEF529F6C40D00B65BBF /* TabBarCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCore.swift; sourceTree = "<group>"; };
 		09D1FEF729F7B55500B65BBF /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		09D1FEF929F8DAFE00B65BBF /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		09D1FEFB29F8EE7A00B65BBF /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		09D1FEFD29F90B1200B65BBF /* HomeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCore.swift; sourceTree = "<group>"; };
 		1642C9028DFC813C557F0614 /* Pods-shout-shoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shout-shoutUITests.release.xcconfig"; path = "Target Support Files/Pods-shout-shoutUITests/Pods-shout-shoutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		580B7E02EE3BD2C6BE2414CD /* Pods-shoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shoutTests.release.xcconfig"; path = "Target Support Files/Pods-shoutTests/Pods-shoutTests.release.xcconfig"; sourceTree = "<group>"; };
 		BACDF0AB7E2D2CD534891324 /* Pods-shout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shout.debug.xcconfig"; path = "Target Support Files/Pods-shout/Pods-shout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 		09D1FEDE29F541E400B65BBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09D1FEFF29F91F8500B65BBF /* Modifier */,
 				09D1FEEE29F669F000B65BBF /* Extension */,
 				09D1FEE929F660BB00B65BBF /* Profile */,
 				09D1FEE829F660AE00B65BBF /* Bookmark */,
@@ -213,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				09D1FEE329F5488200B65BBF /* HomeView.swift */,
+				09D1FEFD29F90B1200B65BBF /* HomeCore.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -221,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				09D1FEF129F66AC800B65BBF /* RoundedCornerShape.swift */,
+				09D1FEFB29F8EE7A00B65BBF /* NavigationBar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -245,8 +256,17 @@
 			isa = PBXGroup;
 			children = (
 				09D1FEEF29F66AA300B65BBF /* View+Extension.swift */,
+				09D1FEF929F8DAFE00B65BBF /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		09D1FEFF29F91F8500B65BBF /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				09647B6429F9218000B763B5 /* NavigationBackground.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 		0FE12B8680B00D320749EF95 /* Frameworks */ = {
@@ -516,13 +536,17 @@
 				09D1FEED29F6618C00B65BBF /* BookmarkView.swift in Sources */,
 				09D1FEF029F66AA300B65BBF /* View+Extension.swift in Sources */,
 				09D1FEE429F5488200B65BBF /* HomeView.swift in Sources */,
+				09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */,
 				09B0D6A729F4FB4100DA08C3 /* shoutApp.swift in Sources */,
 				09D1FEF829F7B55500B65BBF /* TabBarItem.swift in Sources */,
+				09D1FEFE29F90B1200B65BBF /* HomeCore.swift in Sources */,
 				09D1FEF629F6C40D00B65BBF /* TabBarCore.swift in Sources */,
 				09D1FEF229F66AC800B65BBF /* RoundedCornerShape.swift in Sources */,
 				09D1FEE729F65E8B00B65BBF /* TabBarView.swift in Sources */,
 				09D1FEEB29F6610900B65BBF /* ProfileView.swift in Sources */,
+				09D1FEFC29F8EE7A00B65BBF /* NavigationBar.swift in Sources */,
 				09D1FEDA29F53C2900B65BBF /* Color.swift in Sources */,
+				09D1FEFA29F8DAFE00B65BBF /* UIApplication+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +716,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -725,7 +749,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
