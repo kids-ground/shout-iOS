@@ -59,7 +59,7 @@ struct TabBarView: View {
           .font(.system(size: 12))
       }
       .frame(maxWidth: .infinity)
-      .foregroundColor(viewStore.selectedTab == tag ? .white : .dark700)
+      .foregroundColor(viewStore.selectedTab == tag ? .white : .gray.opacity(0.5))
     }
   }
 }
