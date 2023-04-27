@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6429F9218000B763B5 /* NavigationBackground.swift */; };
+		09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6729FA682D00B763B5 /* ButtonSectionView.swift */; };
+		09647B6A29FA795200B763B5 /* ShoutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6929FA795200B763B5 /* ShoutSectionView.swift */; };
+		09647B6C29FA796700B763B5 /* WiseSayingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6B29FA796700B763B5 /* WiseSayingSectionView.swift */; };
+		09647B7129FA79B600B763B5 /* ShoutSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B7029FA79B600B763B5 /* ShoutSimpleCell.swift */; };
+		09647B7329FA79C200B763B5 /* WiseSayingSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B7229FA79C200B763B5 /* WiseSayingSimpleCell.swift */; };
 		09B0D6A729F4FB4100DA08C3 /* shoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */; };
 		09B0D6AB29F4FB4200DA08C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B0D6AA29F4FB4200DA08C3 /* Assets.xcassets */; };
 		09B0D6AE29F4FB4200DA08C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B0D6AD29F4FB4200DA08C3 /* Preview Assets.xcassets */; };
@@ -53,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		09647B6429F9218000B763B5 /* NavigationBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackground.swift; sourceTree = "<group>"; };
+		09647B6729FA682D00B763B5 /* ButtonSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSectionView.swift; sourceTree = "<group>"; };
+		09647B6929FA795200B763B5 /* ShoutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutSectionView.swift; sourceTree = "<group>"; };
+		09647B6B29FA796700B763B5 /* WiseSayingSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseSayingSectionView.swift; sourceTree = "<group>"; };
+		09647B7029FA79B600B763B5 /* ShoutSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutSimpleCell.swift; sourceTree = "<group>"; };
+		09647B7229FA79C200B763B5 /* WiseSayingSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseSayingSimpleCell.swift; sourceTree = "<group>"; };
 		09B0D6A329F4FB4100DA08C3 /* shout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoutApp.swift; sourceTree = "<group>"; };
 		09B0D6AA29F4FB4200DA08C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +126,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09647B6629FA680E00B763B5 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				09647B6729FA682D00B763B5 /* ButtonSectionView.swift */,
+				09647B6929FA795200B763B5 /* ShoutSectionView.swift */,
+				09647B6B29FA796700B763B5 /* WiseSayingSectionView.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		09647B6D29FA798D00B763B5 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				09D1FEF129F66AC800B65BBF /* RoundedCornerShape.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
+		09647B6E29FA799500B763B5 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				09D1FEFB29F8EE7A00B65BBF /* NavigationBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		09647B6F29FA799B00B763B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				09647B7029FA79B600B763B5 /* ShoutSimpleCell.swift */,
+				09647B7229FA79C200B763B5 /* WiseSayingSimpleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		09B0D69A29F4FB4100DA08C3 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +266,7 @@
 		09D1FEE229F5487400B65BBF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				09647B6629FA680E00B763B5 /* Section */,
 				09D1FEE329F5488200B65BBF /* HomeView.swift */,
 				09D1FEFD29F90B1200B65BBF /* HomeCore.swift */,
 			);
@@ -230,8 +276,9 @@
 		09D1FEE529F54CB000B65BBF /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				09D1FEF129F66AC800B65BBF /* RoundedCornerShape.swift */,
-				09D1FEFB29F8EE7A00B65BBF /* NavigationBar.swift */,
+				09647B6F29FA799B00B763B5 /* Cell */,
+				09647B6E29FA799500B763B5 /* Navigation */,
+				09647B6D29FA798D00B763B5 /* Shape */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -533,6 +580,8 @@
 			files = (
 				09D1FEF429F67DFF00B65BBF /* MainCore.swift in Sources */,
 				09D1FEE129F5421B00B65BBF /* MainView.swift in Sources */,
+				09647B6C29FA796700B763B5 /* WiseSayingSectionView.swift in Sources */,
+				09647B6A29FA795200B763B5 /* ShoutSectionView.swift in Sources */,
 				09D1FEED29F6618C00B65BBF /* BookmarkView.swift in Sources */,
 				09D1FEF029F66AA300B65BBF /* View+Extension.swift in Sources */,
 				09D1FEE429F5488200B65BBF /* HomeView.swift in Sources */,
@@ -544,7 +593,10 @@
 				09D1FEF229F66AC800B65BBF /* RoundedCornerShape.swift in Sources */,
 				09D1FEE729F65E8B00B65BBF /* TabBarView.swift in Sources */,
 				09D1FEEB29F6610900B65BBF /* ProfileView.swift in Sources */,
+				09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */,
 				09D1FEFC29F8EE7A00B65BBF /* NavigationBar.swift in Sources */,
+				09647B7129FA79B600B763B5 /* ShoutSimpleCell.swift in Sources */,
+				09647B7329FA79C200B763B5 /* WiseSayingSimpleCell.swift in Sources */,
 				09D1FEDA29F53C2900B65BBF /* Color.swift in Sources */,
 				09D1FEFA29F8DAFE00B65BBF /* UIApplication+Extension.swift in Sources */,
 			);

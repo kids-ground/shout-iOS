@@ -17,100 +17,40 @@ struct HomeView: View {
       ScrollView {
         LazyVStack {
           Section {
-            HStack(alignment: .top, spacing: 8) {
-              writeButton(
-                imageName: "heart",
-                imageColor: .pink,
-                title: "외침",
-                description: "그때, 하지\n못했던 이야기"
-              ) { }
-              
-              Spacer().frame(maxWidth: 0)
-              
-              writeButton(
-                imageName: "star",
-                imageColor: .yellow,
-                title: "명언",
-                description: "당신의\n인생철학은?"
-              ) { }
-            }
+            ButtonSectionView()
           } header: {
-            VStack{}.frame(height: 16)
+            Spacer().frame(height: 16)
           } footer: {
-            VStack{}.frame(height: 32)
+            Spacer().frame(height: 48)
           }
           .padding(.horizontal, 24)
           .frame(maxWidth: .infinity, alignment: .center)
           
           Section {
-            ScrollView(.horizontal, showsIndicators: false) {
-              LazyHStack(spacing: 16) {
-                ForEach(0..<10) { data in
-                  
-                  
-                  VStack(alignment: .leading, spacing: 16) {
-                    HStack(spacing: 16) {
-                      AsyncImage(url: URL(string:"https://hws.dev/paul.jpg")) { image in
-                        image.resizable()
-                          .frame(width: 40, height: 40)
-                          .scaledToFit()
-                          .clipShape(Circle())
-                      } placeholder: {
-                        VStack{ }.frame(width: 40, height: 40)
-                      }
-                      Text("빌게이츠")
-                        .fontWeight(.bold)
-                    }
-                    Text("세상에 돈보다 중요한게 있다고? 그건 말이 안되는 소리입니다. 여러분, 사탕발림소리에 속지마세요")
-                      .font(.system(size: 16))
-                      .multilineTextAlignment(.leading)
-                      
-                      .lineLimit(nil)
-                      .lineSpacing(6)
-                    
-                    Spacer()
-                    Divider()
-                    
-                    HStack(alignment: .top, spacing: 16) {
-                      HStack(alignment: .center, spacing: 4) {
-                        Image("heart").renderingMode(.template)
-                          .foregroundColor(.pink)
-                        Text("137")
-                      }
-                      
-                      HStack(alignment: .center, spacing: 4) {
-                        Image("star").renderingMode(.template)
-                          .foregroundColor(.yellow)
-                        Text("124")
-                      }
-                    }
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    
-                  }
-                  .padding(16)
-                  .frame(maxWidth: 250, minHeight: 250, alignment: .topLeading)
-                  .background(Color.dark500)
-                  .cornerRadius(16)
-                  
-                  
-                }
-              }
-              .padding(.horizontal, 24)
-            }
+            ShoutSectionView()
           } header: {
-            HStack{
-              Text("🔥 Hot 외침")
-                .font(.system(size: 22))
-                .fontWeight(.bold)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 24)
+            sectionHeader(
+              title: "Hot 외침",
+              titleSystemImageName: "flame.fill",
+              imageColor: .red
+            )
           } footer: {
-            VStack{}.frame(height: 32)
+            Spacer().frame(height: 48)
           }
           .frame(maxWidth: .infinity, alignment: .center)
           
-          
+          Section {
+            WiseSayingSectionView()
+          } header: {
+            sectionHeader(
+              title: "Best 명언",
+              titleSystemImageName: "sparkle",
+              imageColor: .yellow
+            )
+          } footer: {
+            Spacer().frame(height: 48)
+          }
+          .frame(maxWidth: .infinity, alignment: .center)
         }
         .background(GeometryReader { proxy in
           Color.clear
@@ -146,44 +86,39 @@ struct HomeView: View {
   }
   
   
-  func writeButton(
-    imageName: String,
-    imageColor: Color,
+  func sectionHeader(
     title: String,
-    description: String,
-    action: @escaping () -> Void
+    titleSystemImageName: String,
+    imageColor: Color
   ) -> some View {
-    Button{
-      action()
-    } label: {
-      VStack(spacing: 16) {
-        ZStack(alignment: .center) {
-          Circle().frame(width: 55)
-            .foregroundColor(imageColor)
-          Image(imageName)
-            .renderingMode(.template)
-            .resizable()
-            .scaledToFit()
-            .frame(height: 35)
-            .foregroundColor(.white)
+    HStack(alignment: .center, spacing: 8) {
+      Image(systemName: titleSystemImageName)
+        .renderingMode(.template)
+        .foregroundColor(imageColor)
+        .imageScale(.large)
+      Text(title)
+        .font(.system(size: 22))
+        .fontWeight(.bold)
+      
+      Spacer()
+      
+      Button {
+        
+      } label: {
+        HStack(spacing: 4) {
+          Text("전체보기")
+            .font(.system(size: 14))
+          Image(systemName:  "chevron.right")
+            .imageScale(.small)
         }
-        .fixedSize()
-        
-        Text(title)
-          .foregroundColor(.white)
-          .font(.system(size: 20))
-          .fontWeight(.bold)
-        
-        Text(description)
-          .font(.system(size: 16))
-          .foregroundColor(.white)
-          .multilineTextAlignment(.center)
+        .foregroundColor(.gray)
       }
-      .padding(20)
+      .padding(.top, 12)
+      .padding(.leading, 12)
     }
-    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-    .background(Color.dark500)
-    .cornerRadius(16)
+    .frame(maxWidth: .infinity, alignment: .leading)
+    .padding(.horizontal, 24)
+    .padding(.bottom, 12)
   }
 }
 
