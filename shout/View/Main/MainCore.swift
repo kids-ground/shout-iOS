@@ -12,6 +12,7 @@ struct MainCore: ReducerProtocol {
   struct State: Equatable {
     var tabBarState = TabBarCore.State()
     var homeState = HomeCore.State()
+    var router: [BaseRoute] = []
   }
   
   enum Action: Equatable {
@@ -19,6 +20,7 @@ struct MainCore: ReducerProtocol {
     case homeAction(HomeCore.Action)
     
     case selectTab(TabBarItem)
+    case routeChange([BaseRoute])
   }
   
   var body: some ReducerProtocol<State, Action> {
@@ -29,7 +31,16 @@ struct MainCore: ReducerProtocol {
       HomeCore()
     }
     Reduce { state, action in
-      return .none
+      switch action {
+      case let .homeAction(.routeAction(route)):
+        state.router.append(route)
+        return .none
+      case let .routeChange(route):
+        state.router = route
+        return .none
+      default:
+        return .none
+      }
     }
   }
 }
