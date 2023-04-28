@@ -11,9 +11,19 @@ import ComposableArchitecture
 struct MainView: View {
   let store: StoreOf<MainCore>
   
+  init(store: StoreOf<MainCore>) {
+    self.store = store
+    UITabBar.appearance().isHidden = true
+  }
+  
   var body: some View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
-      NavigationStack {
+      NavigationStack(
+        path: viewStore.binding(
+          get: \.router,
+          send: MainCore.Action.routeChange
+        )
+      ) {
         TabView(selection: viewStore.binding(
           get: \.tabBarState.selectedTab,
           send: MainCore.Action.selectTab)
@@ -26,16 +36,26 @@ struct MainView: View {
           )
             .background(Color.dark700)
             .tag(TabBarItem.home)
+            .safeAreaInset(edge: .bottom) {
+              VStack{}.frame(height: TabBarView.originalTabBarHeight)
+            }
           
           BookmarkView()
             .background(Color.dark700)
             .tag(TabBarItem.bookmark)
+            .safeAreaInset(edge: .bottom) {
+              VStack{}.frame(height: TabBarView.originalTabBarHeight)
+            }
           
           ProfileView()
             .background(Color.dark700)
             .tag(TabBarItem.setting)
+            .safeAreaInset(edge: .bottom) {
+              VStack{}.frame(height: TabBarView.originalTabBarHeight)
+            }
         }
         .accentColor(.white)
+        
         .overlay(alignment: .bottom) {
           TabBarView(
             store: store.scope(
@@ -45,8 +65,10 @@ struct MainView: View {
           )
         }
         .edgesIgnoringSafeArea(.bottom)
+        .navigationDestination(for: BaseRoute.self) { value in
+          Text("g2")
+        }
       }
-      
     }
   }
 }

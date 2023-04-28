@@ -16,6 +16,10 @@ struct TabBarView: View {
     
   }
   
+  static var originalTabBarHeight: CGFloat {
+    UIApplication.safeAreaInsets.bottom < 10 ? 60 : 50
+  }
+  
   private var tabBarHeight: CGFloat {
     UIApplication.safeAreaInsets.bottom < 10 ?
       60 : UIApplication.safeAreaInsets.bottom + 50
