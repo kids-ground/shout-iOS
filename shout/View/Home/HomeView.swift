@@ -17,11 +17,16 @@ struct HomeView: View {
       ScrollView {
         LazyVStack {
           Section {
-            ButtonSectionView()
+            ButtonSectionView(
+              store: store.scope(
+                state: \.buttonSectionState,
+                action: HomeCore.Action.buttonSectionAction
+              )
+            )
           } header: {
             Spacer().frame(height: 16)
           } footer: {
-            Spacer().frame(height: 48)
+            Spacer().frame(height: 60)
           }
           .padding(.horizontal, 24)
           .frame(maxWidth: .infinity, alignment: .center)
@@ -35,7 +40,7 @@ struct HomeView: View {
               imageColor: .red
             )
           } footer: {
-            Spacer().frame(height: 48)
+            Spacer().frame(height: 60)
           }
           .frame(maxWidth: .infinity, alignment: .center)
           
@@ -97,7 +102,7 @@ struct HomeView: View {
         .foregroundColor(imageColor)
         .imageScale(.large)
       Text(title)
-        .font(.system(size: 22))
+        .font(.system(size: 18))
         .fontWeight(.bold)
       
       Spacer()
@@ -118,7 +123,7 @@ struct HomeView: View {
     }
     .frame(maxWidth: .infinity, alignment: .leading)
     .padding(.horizontal, 24)
-    .padding(.bottom, 12)
+    .padding(.bottom, 8)
   }
 }
 
