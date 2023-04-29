@@ -17,9 +17,9 @@ enum TabBarItem: String, CaseIterable {
     case .home:
       return "홈"
     case .bookmark:
-      return "저장"
+      return "외침"
     case .setting:
-      return "설정"
+      return "프로필"
     }
   }
   

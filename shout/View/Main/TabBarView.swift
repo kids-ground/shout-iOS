@@ -38,7 +38,7 @@ struct TabBarView: View {
       .padding(.horizontal, 24)
       .padding(.vertical, 8)
       .frame(maxWidth: .infinity, maxHeight: self.tabBarHeight, alignment: .top)
-      .background(.ultraThinMaterial)
+      .background(.regularMaterial)
       .cornerRadius(16, corners: [.topLeft, .topRight])
     }
   }
