@@ -36,7 +36,7 @@ struct ButtonSectionView: View {
         
         HStack(alignment: .top, spacing: 8) {
           writeButton(
-            imageName: "brand",
+            imageName: "brand3D",
             imageColor: .green,
             title: "외침",
             description: "그때, 하지\n못했던 이야기"
@@ -47,7 +47,7 @@ struct ButtonSectionView: View {
           Spacer().frame(maxWidth: 0)
           
           writeButton(
-            imageName: "bulb",
+            imageName: "bulb3D",
             imageColor: .blue,
             title: "명언",
             description: "당신의\n인생철학은?"
@@ -74,11 +74,11 @@ struct ButtonSectionView: View {
           Circle().frame(width: 50)
             .foregroundColor(.white)
           Image(imageName)
-            .renderingMode(.template)
+//            .renderingMode(.template)
             .resizable()
             .scaledToFit()
-            .frame(height: 30)
-            .foregroundColor(imageColor)
+            .frame(height: 35)
+//            .foregroundColor(imageColor)
         }
         .fixedSize()
         
