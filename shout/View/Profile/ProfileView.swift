@@ -32,9 +32,11 @@ struct ProfileView: View {
       .padding(.vertical, 4)
       
       Section {
-        Text("차단유저 관리")
+        Text("저장한 명언")
           .listRowBackground(Color.dark500)
-        Text("내 외침/명언 관리")
+        Text("내 외침/명언")
+          .listRowBackground(Color.dark500)
+        Text("차단유저")
           .listRowBackground(Color.dark500)
       } header: {
         Text("관리")
@@ -72,7 +74,8 @@ struct ProfileView: View {
     }
     .listStyle(.insetGrouped)
     .scrollContentBackground(.hidden)
-    .padding(.horizontal, 4)
+    .scrollIndicators(.hidden)
+    .padding(.horizontal, 8)
     .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
     .safeAreaInset(edge: .top) {
       NavigationBar(isTransparent: false) {
