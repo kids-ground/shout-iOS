@@ -11,7 +11,7 @@ struct ShoutSectionView: View {
     var body: some View {
       ScrollView(.horizontal, showsIndicators: false) {
         LazyHStack(spacing: 16) {
-          ForEach(0..<10) { data in
+          ForEach(0..<5) { data in
             ShoutSimpleCell()
           }
         }
