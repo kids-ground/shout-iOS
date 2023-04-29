@@ -13,8 +13,10 @@ struct WiseSayingSimpleCell: View {
   
   var body: some View {
     VStack {
-      ZStack {
-        backGroundColor[idx].blur(radius: 120)
+      ZStack(alignment: .center) {
+        backGroundColor[idx]
+          .frame(width: 100, height:200)
+          .blur(radius: 100)
         VStack(spacing: 24) {
           VStack(alignment: .center, spacing: 12) {
             Image(systemName: "quote.opening")
