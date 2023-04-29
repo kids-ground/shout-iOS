@@ -11,7 +11,7 @@ struct WiseSayingSectionView: View {
     var body: some View {
       TabView {
         ForEach(0..<5) { data in
-          WiseSayingSimpleCell()
+          WiseSayingSimpleCell(idx: data)
         }
       }
       .tabViewStyle(.page)
