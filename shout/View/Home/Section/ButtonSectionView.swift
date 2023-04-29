@@ -39,7 +39,7 @@ struct ButtonSectionView: View {
             imageName: "brand3D",
             imageColor: .green,
             title: "외침",
-            description: "그때, 하지\n못했던 이야기"
+            description: "세상을 향해\n외치기"
           ) {
             viewStore.send(.routeAction(.writeShout))
           }
@@ -50,7 +50,7 @@ struct ButtonSectionView: View {
             imageName: "bulb3D",
             imageColor: .blue,
             title: "명언",
-            description: "당신의\n인생철학은?"
+            description: "나만의 띵언\n만들기"
           ) {
             viewStore.send(.routeAction(.writeWiseSaying))
           }
@@ -72,34 +72,33 @@ struct ButtonSectionView: View {
       HStack(spacing: 16) {
         ZStack(alignment: .center) {
           Circle().frame(width: 50)
-            .foregroundColor(.white)
+            .foregroundColor(.clear)
           Image(imageName)
-//            .renderingMode(.template)
             .resizable()
             .scaledToFit()
-            .frame(height: 35)
-//            .foregroundColor(imageColor)
+            .frame(height: 45)
         }
         .fixedSize()
         
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: 8) {
           Text(title)
             .foregroundColor(.white)
             .font(.system(size: 18))
             .fontWeight(.bold)
           
           Text(description)
-            .font(.system(size: 12))
+            .font(.system(size: 11))
             .foregroundColor(.white)
             .multilineTextAlignment(.leading)
         }
       }
-      .frame(alignment: .leading)
-      .padding(0)
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding(.horizontal, 16)
       .padding(.vertical, 16)
+      
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-    .background(imageColor)
+    .background(.ultraThinMaterial)
     .cornerRadius(16)
   }
 }
