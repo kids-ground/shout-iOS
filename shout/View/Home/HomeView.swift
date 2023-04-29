@@ -34,11 +34,7 @@ struct HomeView: View {
           Section {
             ShoutSectionView()
           } header: {
-            sectionHeader(
-              title: "Hot 외침",
-              titleSystemImageName: "flame.fill",
-              imageColor: .red
-            )
+            sectionHeader(title: "Hot 외침")
           } footer: {
             Spacer().frame(height: 60)
           }
@@ -47,11 +43,7 @@ struct HomeView: View {
           Section {
             WiseSayingSectionView()
           } header: {
-            sectionHeader(
-              title: "Best 명언",
-              titleSystemImageName: "sparkle",
-              imageColor: .yellow
-            )
+            sectionHeader(title: "Best 명언")
           } footer: {
             Spacer().frame(height: 48)
           }
@@ -92,30 +84,12 @@ struct HomeView: View {
   
   
   func sectionHeader(
-    title: String,
-    titleSystemImageName: String,
-    imageColor: Color
+    title: String
   ) -> some View {
     HStack(alignment: .center, spacing: 8) {
       Text(title)
         .font(.system(size: 20))
         .fontWeight(.bold)
-      
-      Spacer()
-      
-      Button {
-        
-      } label: {
-        HStack(spacing: 4) {
-          Text("전체보기")
-            .font(.system(size: 14))
-          Image(systemName:  "chevron.right")
-            .imageScale(.small)
-        }
-        .foregroundColor(.gray)
-      }
-      .padding(.top, 12)
-      .padding(.leading, 12)
     }
     .frame(maxWidth: .infinity, alignment: .leading)
     .padding(.horizontal, 24)
