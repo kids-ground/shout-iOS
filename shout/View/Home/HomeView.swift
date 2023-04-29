@@ -97,12 +97,8 @@ struct HomeView: View {
     imageColor: Color
   ) -> some View {
     HStack(alignment: .center, spacing: 8) {
-      Image(systemName: titleSystemImageName)
-        .renderingMode(.template)
-        .foregroundColor(imageColor)
-        .imageScale(.large)
       Text(title)
-        .font(.system(size: 18))
+        .font(.system(size: 20))
         .fontWeight(.bold)
       
       Spacer()
