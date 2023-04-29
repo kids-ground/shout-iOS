@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct WiseSayingSimpleCell: View {
+  let backGroundColor: [Color] = [.yellow, .blue, .pink, .mint, .purple]
+  let idx: Int
+  
   var body: some View {
     VStack {
       ZStack {
-        Color.gray.blur(radius: 80)
+        backGroundColor[idx].blur(radius: 120)
         VStack(spacing: 24) {
           VStack(alignment: .center, spacing: 12) {
             Image(systemName: "quote.opening")
@@ -80,6 +83,8 @@ struct WiseSayingSimpleCell: View {
 
 struct WiseSayingSimpleCell_Previews: PreviewProvider {
     static var previews: some View {
-        WiseSayingSimpleCell()
+      WiseSayingSimpleCell(idx: 1)
+          .preferredColorScheme(.dark)
+          .frame(height: 300)
     }
 }
