@@ -40,9 +40,9 @@ struct MainView: View {
               VStack{}.frame(height: TabBarView.originalTabBarHeight)
             }
           
-          BookmarkView()
+          PostListView()
             .background(Color.dark700)
-            .tag(TabBarItem.bookmark)
+            .tag(TabBarItem.postList)
             .safeAreaInset(edge: .bottom) {
               VStack{}.frame(height: TabBarView.originalTabBarHeight)
             }
