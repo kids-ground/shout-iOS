@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		095FEE4329FBA63000E3CFAE /* BaseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095FEE4229FBA63000E3CFAE /* BaseRoute.swift */; };
 		0961F69829FE14E500B62032 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961F69729FE14E500B62032 /* PostListView.swift */; };
+		0961F69A29FE3F0400B62032 /* ParticleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961F69929FE3F0400B62032 /* ParticleEffect.swift */; };
+		0961F69D29FE404B00B62032 /* ReactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961F69C29FE404B00B62032 /* ReactionButton.swift */; };
 		09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6429F9218000B763B5 /* NavigationBackground.swift */; };
 		09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6729FA682D00B763B5 /* ButtonSectionView.swift */; };
 		09647B6A29FA795200B763B5 /* ShoutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6929FA795200B763B5 /* ShoutSectionView.swift */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		095FEE4229FBA63000E3CFAE /* BaseRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoute.swift; sourceTree = "<group>"; };
 		0961F69729FE14E500B62032 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		0961F69929FE3F0400B62032 /* ParticleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEffect.swift; sourceTree = "<group>"; };
+		0961F69C29FE404B00B62032 /* ReactionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionButton.swift; sourceTree = "<group>"; };
 		09647B6429F9218000B763B5 /* NavigationBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackground.swift; sourceTree = "<group>"; };
 		09647B6729FA682D00B763B5 /* ButtonSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSectionView.swift; sourceTree = "<group>"; };
 		09647B6929FA795200B763B5 /* ShoutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutSectionView.swift; sourceTree = "<group>"; };
@@ -146,6 +150,14 @@
 				0961F69729FE14E500B62032 /* PostListView.swift */,
 			);
 			path = PostList;
+			sourceTree = "<group>";
+		};
+		0961F69B29FE403F00B62032 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				0961F69C29FE404B00B62032 /* ReactionButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		09647B6629FA680E00B763B5 /* Section */ = {
@@ -301,6 +313,7 @@
 		09D1FEE529F54CB000B65BBF /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				0961F69B29FE403F00B62032 /* Button */,
 				09647B6F29FA799B00B763B5 /* Cell */,
 				09647B6E29FA799500B763B5 /* Navigation */,
 				09647B6D29FA798D00B763B5 /* Shape */,
@@ -337,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				09647B6429F9218000B763B5 /* NavigationBackground.swift */,
+				0961F69929FE3F0400B62032 /* ParticleEffect.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -609,6 +623,7 @@
 				09647B6A29FA795200B763B5 /* ShoutSectionView.swift in Sources */,
 				09D1FEED29F6618C00B65BBF /* BookmarkView.swift in Sources */,
 				09D1FEF029F66AA300B65BBF /* View+Extension.swift in Sources */,
+				0961F69D29FE404B00B62032 /* ReactionButton.swift in Sources */,
 				09D1FEE429F5488200B65BBF /* HomeView.swift in Sources */,
 				09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */,
 				09B0D6A729F4FB4100DA08C3 /* shoutApp.swift in Sources */,
@@ -622,6 +637,7 @@
 				09D1FEEB29F6610900B65BBF /* ProfileView.swift in Sources */,
 				09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */,
 				09647B7529FA7E7600B763B5 /* ButtonSectionCore.swift in Sources */,
+				0961F69A29FE3F0400B62032 /* ParticleEffect.swift in Sources */,
 				09D1FEFC29F8EE7A00B65BBF /* NavigationBar.swift in Sources */,
 				09647B7129FA79B600B763B5 /* ShoutSimpleCell.swift in Sources */,
 				09647B7329FA79C200B763B5 /* WiseSayingSimpleCell.swift in Sources */,
