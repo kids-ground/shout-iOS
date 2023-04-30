@@ -10,6 +10,7 @@ import SwiftUI
 
 
 extension Color {
+  static let colors: [Color] = [.pink, .red, .orange, .yellow, .green, .mint, .cyan, .teal, .blue, .brown, .indigo, .purple]
   
   static let dark500 = Color("dark500")
   static let dark700 = Color("dark700")
