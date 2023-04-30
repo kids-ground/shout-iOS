@@ -76,7 +76,7 @@ struct ProfileView: View {
     .safeAreaInset(edge: .top) {
       NavigationBar(isTransparent: false) {
         HStack(spacing: 8) {
-          Text("설정")
+          Text("프로필")
             .font(.system(size: 20))
             .fontWeight(.heavy)
         }

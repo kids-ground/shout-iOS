@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095FEE4329FBA63000E3CFAE /* BaseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095FEE4229FBA63000E3CFAE /* BaseRoute.swift */; };
+		0961F69829FE14E500B62032 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961F69729FE14E500B62032 /* PostListView.swift */; };
 		09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6429F9218000B763B5 /* NavigationBackground.swift */; };
 		09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6729FA682D00B763B5 /* ButtonSectionView.swift */; };
 		09647B6A29FA795200B763B5 /* ShoutSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B6929FA795200B763B5 /* ShoutSectionView.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		095FEE4229FBA63000E3CFAE /* BaseRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoute.swift; sourceTree = "<group>"; };
+		0961F69729FE14E500B62032 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		09647B6429F9218000B763B5 /* NavigationBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackground.swift; sourceTree = "<group>"; };
 		09647B6729FA682D00B763B5 /* ButtonSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSectionView.swift; sourceTree = "<group>"; };
 		09647B6929FA795200B763B5 /* ShoutSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutSectionView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 				095FEE4229FBA63000E3CFAE /* BaseRoute.swift */,
 			);
 			path = Route;
+			sourceTree = "<group>";
+		};
+		0961F69629FE14D600B62032 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				0961F69729FE14E500B62032 /* PostListView.swift */,
+			);
+			path = PostList;
 			sourceTree = "<group>";
 		};
 		09647B6629FA680E00B763B5 /* Section */ = {
@@ -252,6 +262,7 @@
 		09D1FEDE29F541E400B65BBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0961F69629FE14D600B62032 /* PostList */,
 				095FEE4129FBA62000E3CFAE /* Route */,
 				09D1FEFF29F91F8500B65BBF /* Modifier */,
 				09D1FEEE29F669F000B65BBF /* Extension */,
@@ -602,6 +613,7 @@
 				09647B6529F9218000B763B5 /* NavigationBackground.swift in Sources */,
 				09B0D6A729F4FB4100DA08C3 /* shoutApp.swift in Sources */,
 				095FEE4329FBA63000E3CFAE /* BaseRoute.swift in Sources */,
+				0961F69829FE14E500B62032 /* PostListView.swift in Sources */,
 				09D1FEF829F7B55500B65BBF /* TabBarItem.swift in Sources */,
 				09D1FEFE29F90B1200B65BBF /* HomeCore.swift in Sources */,
 				09D1FEF629F6C40D00B65BBF /* TabBarCore.swift in Sources */,

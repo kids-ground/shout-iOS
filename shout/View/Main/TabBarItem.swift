@@ -9,15 +9,15 @@ import Foundation
 
 enum TabBarItem: String, CaseIterable {
   case home
-  case bookmark
+  case postList
   case setting
   
   var title: String {
     switch self {
     case .home:
       return "홈"
-    case .bookmark:
-      return "외침"
+    case .postList:
+      return "포스트"
     case .setting:
       return "프로필"
     }
@@ -27,8 +27,8 @@ enum TabBarItem: String, CaseIterable {
     switch self {
     case .home:
       return "home"
-    case .bookmark:
-      return "bookmark"
+    case .postList:
+      return "book"
     case .setting:
       return "user"
     }
