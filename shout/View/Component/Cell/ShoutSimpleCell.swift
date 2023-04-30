@@ -66,5 +66,6 @@ struct ShoutSimpleCell: View {
 struct ShoutSimpleCell_Previews: PreviewProvider {
     static var previews: some View {
         ShoutSimpleCell()
+        .preferredColorScheme(.dark)
     }
 }
