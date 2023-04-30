@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+  @State var toggle = true
+  
   var body: some View {
-    
     List {
       HStack(spacing: 16) {
         AsyncImage(url: URL(string:"https://hws.dev/paul.jpg")) { image in
@@ -32,40 +33,35 @@ struct ProfileView: View {
       .padding(.vertical, 4)
       
       Section {
-        Text("저장한 명언")
-          .listRowBackground(Color.dark500)
-        Text("내 외침/명언")
-          .listRowBackground(Color.dark500)
-        Text("차단유저")
-          .listRowBackground(Color.dark500)
+        listRowView(imageName: "star", title: "저장한 외침/명언")
+        listRowView(imageName: "myPost", title: "내 외침/명언")
+        listRowView(imageName: "userBlock", title: "차단유저")
       } header: {
         Text("관리")
           .foregroundColor(.white)
       }
       
       Section {
-        Text("알림설정")
-          .listRowBackground(Color.dark500)
-        Text("개발자 밥주기")
-          .listRowBackground(Color.dark500)
+        listRowView(imageName: "bell", title: "알림설정") {
+          Toggle("", isOn: $toggle)
+        }
+        listRowView(imageName: "bone", title: "개발자 밥주기")
       } header: {
         Text("일반")
           .foregroundColor(.white)
       }
       
       Section {
-        Text("고객센터")
-          .listRowBackground(Color.dark500)
-        Text("개인정보 처리방침")
-          .listRowBackground(Color.dark500)
-        Text("서비스 이용약관")
-          .listRowBackground(Color.dark500)
-        Text("현재 버전")
-          .listRowBackground(Color.dark500)
-        Text("로그아웃")
-          .listRowBackground(Color.dark500)
-        Text("회원탈퇴")
-          .listRowBackground(Color.dark500)
+        listRowView(imageName: "call", title: "고객센터")
+        listRowView(imageName: "key", title: "개인정보 처리방침")
+        listRowView(imageName: "shield", title: "서비스 이용약관")
+        listRowView(imageName: "info", title: "현재 버전") {
+          Text("v1.0.0")
+            .foregroundColor(.gray)
+            .font(.system(size: 12))
+        }
+        listRowView(imageName: "userLogout", title: "로그아웃") { }
+        listRowView(imageName: "power", title: "회원탈퇴") { }
       } header: {
         Text("정보")
           .foregroundColor(.white)
@@ -86,6 +82,40 @@ struct ProfileView: View {
         }
       }
     }
+  }
+  
+  func listRowView<Content: View>(
+    imageName: String = "",
+    title: String,
+    @ViewBuilder rightItem: () -> Content = {
+      Image(systemName:  "chevron.right")
+        .renderingMode(.template)
+        .resizable()
+        .scaledToFit()
+        .frame(height: 8)
+        .foregroundColor(.gray)
+    }
+  ) -> some View {
+    HStack(spacing: 0){
+      HStack(spacing: 16) {
+        if !imageName.isEmpty {
+          Image(imageName)
+            .renderingMode(.template)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 18)
+        }
+        
+        Text(title)
+          .font(.system(size: 14))
+      }
+      .foregroundColor(.white)
+      
+      Spacer()
+      rightItem()
+    }
+    
+    .listRowBackground(Color.dark500)
   }
 }
 
