@@ -254,6 +254,18 @@
 			path = shoutUITests;
 			sourceTree = "<group>";
 		};
+		09B68B2E29FFDA2300809262 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				0961F69629FE14D600B62032 /* PostList */,
+				09D1FEE929F660BB00B65BBF /* Profile */,
+				09D1FEE829F660AE00B65BBF /* Bookmark */,
+				09D1FEE229F5487400B65BBF /* Home */,
+				09D1FEDF29F5420300B65BBF /* Main */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
 		09D1FED829F53BF900B65BBF /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,15 +286,11 @@
 		09D1FEDE29F541E400B65BBF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0961F69629FE14D600B62032 /* PostList */,
+				09B68B2E29FFDA2300809262 /* Page */,
 				095FEE4129FBA62000E3CFAE /* Route */,
 				09D1FEFF29F91F8500B65BBF /* Modifier */,
 				09D1FEEE29F669F000B65BBF /* Extension */,
-				09D1FEE929F660BB00B65BBF /* Profile */,
-				09D1FEE829F660AE00B65BBF /* Bookmark */,
 				09D1FEE529F54CB000B65BBF /* Component */,
-				09D1FEE229F5487400B65BBF /* Home */,
-				09D1FEDF29F5420300B65BBF /* Main */,
 				09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */,
 			);
 			path = View;
