@@ -38,7 +38,7 @@ struct ShoutSimpleCell: View {
             .scaledToFit()
             .frame(width: 18)
             .foregroundColor(.pink)
-          
+            .opacity(0.3)
           Text("137")
             .font(.system(size: 14))
         }
@@ -49,6 +49,7 @@ struct ShoutSimpleCell: View {
             .scaledToFit()
             .frame(width: 18)
             .foregroundColor(.yellow)
+            .opacity(0.3)
           Text("124")
             .font(.system(size: 14))
         }
