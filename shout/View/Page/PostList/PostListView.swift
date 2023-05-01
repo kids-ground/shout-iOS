@@ -60,7 +60,9 @@ struct PostListView: View {
         }
         .tag(0)
         .scrollIndicators(.hidden)
-        
+        .refreshable {
+          
+        }
         
         ScrollView{
           LazyVStack(spacing: 24){
@@ -73,6 +75,9 @@ struct PostListView: View {
         }
         .tag(1)
         .scrollIndicators(.hidden)
+        .refreshable {
+          
+        }
       }
       .tabViewStyle(.page(indexDisplayMode: .never))
     }
@@ -109,7 +114,7 @@ struct ShoutInteractiveCell: View {
           .font(.system(size: 14))
           .fontWeight(.bold)
       }
-      Text("세상에 돈보다 중요한게 있다고? 그건 말이 안되는 소리입니다. 여러분, 사탕발림소리에 속지마세요. 돈 머니가 최곱니다 여러분! 저를 보세요 이거리얼입니다! 사탕발림소리에 속지마세요. 돈 머니가 최곱니다 여러분! 저를 보세요 이거리얼입니다! 사탕발림소리에 속지마세요. 돈 머니가 최곱니다 여러분! 저를 보세요 이거리얼입니다! ")
+      Text("세상에 돈보다 중요한게 있다고? 그건 말이 안되는 소리입니다. 여러분, 사탕발림소리에 속지마세요. 돈 머니가 최곱니다 여러분! 저를 보세요 이거리얼입니다! 사탕발림소리에 속지마세요.\n 돈 머니가 최곱니다 여러분! 저를 보세요 이거리얼입니다! 사탕발림소리에 속지마세요. 돈 머니가 최곱니다 여러분! 저를 보세요 이거리얼입니다! ")
         .font(.system(size: 14))
         .multilineTextAlignment(.leading)
         .lineSpacing(4)
@@ -153,7 +158,7 @@ struct WiseSayingInteractiveCell: View {
               .font(.system(size: 15))
               .fontWeight(.semibold)
               .multilineTextAlignment(.center)
-              .lineSpacing(4)
+              .lineSpacing(8)
             Image(systemName: "quote.closing")
               .imageScale(.small)
           }
