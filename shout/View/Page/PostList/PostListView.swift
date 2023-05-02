@@ -88,6 +88,30 @@ struct PostListView: View {
           Text("포스트")
             .font(.system(size: 20))
             .fontWeight(.heavy)
+          
+          Spacer()
+          
+          Menu {
+            Button {
+              
+            } label: {
+              Text("외침 작성하기")
+                .font(.system(size: 14))
+                .fontWeight(.semibold)
+            }
+            
+            Button {
+              
+            } label: {
+              Text("명언 제조하기")
+                .font(.system(size: 14))
+                .fontWeight(.semibold)
+            }
+          } label: {
+            Image("pen")
+              .renderingMode(.template)
+              .foregroundColor(.white)
+          }
         }
       }
     }
