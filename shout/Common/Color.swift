@@ -15,9 +15,11 @@ extension Color {
   static let dark500 = Color("dark500")
   static let dark700 = Color("dark700")
   
-  
   static let blue500 = Color("blue500")
   static let orange500 = Color("orange500")
   static let green500 = Color("green500")
   static let purple500 = Color("purple500")
+  
+  static let kakaoYellow = Color("kakaoYellow")
+  static let kakaoBrown = Color("kakaoBrown")
 }
