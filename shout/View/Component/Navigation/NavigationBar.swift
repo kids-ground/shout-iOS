@@ -24,7 +24,7 @@ struct NavigationBar<Content: View>: View {
     VStack {
       titleContent()
     }
-    .padding(.leading, 24)
+    .padding(.horizontal, 24)
     .padding(.bottom, 12)
     .padding(.top, self.topPadding)
     .frame(maxWidth: .infinity, alignment: .leading)
