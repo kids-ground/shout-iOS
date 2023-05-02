@@ -90,14 +90,14 @@ struct LoginView: View {
         HStack(alignment: .center) {
           Text(title)
             .foregroundColor(.black)
-            .font(.system(size: 14))
+            .font(.system(size: 15))
             .fontWeight(.semibold)
         }
         .frame(maxWidth: .infinity)
         VStack{}.frame(width: 24)
       }
       .padding(.horizontal, 16)
-      .padding(.vertical, 12)
+      .padding(.vertical, 14)
     }
     .frame(maxWidth: .infinity, alignment: .leading)
     .background(backgroundColor)
