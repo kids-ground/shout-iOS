@@ -32,6 +32,7 @@ struct LoginView: View {
           Image("brand3D")
             .resizable()
             .scaledToFit()
+            .rotationEffect(.degrees(-25))
           VStack{}.frame(height: 60)
         }
         
@@ -40,6 +41,7 @@ struct LoginView: View {
           Image("bulb3D")
             .resizable()
             .scaledToFit()
+            .rotationEffect(.degrees(25))
         }
       }
       .frame(maxHeight: .infinity)
