@@ -21,6 +21,9 @@ struct ReactionButton: View {
     VStack {
       HStack(spacing: 20) {
         Button{
+          if !isActive {
+            HapticManager.shared.impact(style: .soft)
+          }
           onTap(!isActive)
         } label: {
           HStack(alignment: .center, spacing: 10) {
