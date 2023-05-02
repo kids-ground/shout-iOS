@@ -49,16 +49,14 @@ struct LoginView: View {
         socialLoginButton(
           socialImage: "kakaoLogo",
           title: "카카오톡으로 계속하기",
-          imageColor: .kakaoBrown,
           backgroundColor: .kakaoYellow,
-          fontColor: .black
+          fontColor: .kakaoBrown
         ) {
           
         }
         socialLoginButton(
           socialImage: "appleLogo",
           title: "Apple로 계속하기",
-          imageColor: .black,
           backgroundColor: .white,
           fontColor: .black
         ) {
@@ -74,7 +72,6 @@ struct LoginView: View {
   func socialLoginButton(
     socialImage: String,
     title: String,
-    imageColor: Color,
     backgroundColor: Color,
     fontColor: Color,
     action: @escaping () -> Void
@@ -88,12 +85,13 @@ struct LoginView: View {
           .resizable()
           .scaledToFit()
           .frame(width: 24, height: 24)
-          .foregroundColor(imageColor)
+          .foregroundColor(fontColor)
           
         HStack(alignment: .center) {
           Text(title)
-            .foregroundColor(fontColor)
-            .font(.system(size: 16))
+            .foregroundColor(.black)
+            .font(.system(size: 14))
+            .fontWeight(.semibold)
         }
         .frame(maxWidth: .infinity)
         VStack{}.frame(width: 24)
