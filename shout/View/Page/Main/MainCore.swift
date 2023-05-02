@@ -12,7 +12,9 @@ struct MainCore: ReducerProtocol {
   struct State: Equatable {
     var tabBarState = TabBarCore.State()
     var homeState = HomeCore.State()
+    
     var router: [BaseRoute] = []
+    var showLoginView = false
   }
   
   enum Action: Equatable {
@@ -21,6 +23,7 @@ struct MainCore: ReducerProtocol {
     
     case selectTab(TabBarItem)
     case routeChange([BaseRoute])
+    case loginViewDismiss(Bool)
   }
   
   var body: some ReducerProtocol<State, Action> {
@@ -33,10 +36,14 @@ struct MainCore: ReducerProtocol {
     Reduce { state, action in
       switch action {
       case let .homeAction(.routeAction(route)):
-        state.router.append(route)
+//        state.router.append(route)
+        state.showLoginView = true
         return .none
       case let .routeChange(route):
         state.router = route
+        return .none
+      case let .loginViewDismiss(isDismiss):
+        state.showLoginView = isDismiss
         return .none
       default:
         return .none

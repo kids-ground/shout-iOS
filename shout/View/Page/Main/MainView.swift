@@ -68,6 +68,12 @@ struct MainView: View {
         .navigationDestination(for: BaseRoute.self) { value in
           Text("g2")
         }
+        .sheet(isPresented: viewStore.binding(
+          get: \.showLoginView,
+          send: MainCore.Action.loginViewDismiss)
+        ) {
+          LoginView()
+        }
       }
     }
   }

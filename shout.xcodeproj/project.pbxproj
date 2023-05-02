@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095D96352A00B68200F27E8F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D96342A00B68200F27E8F /* HapticManager.swift */; };
+		095D96382A00BA6F00F27E8F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D96372A00BA6F00F27E8F /* LoginView.swift */; };
 		095FEE4329FBA63000E3CFAE /* BaseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095FEE4229FBA63000E3CFAE /* BaseRoute.swift */; };
 		0961F69829FE14E500B62032 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961F69729FE14E500B62032 /* PostListView.swift */; };
 		0961F69A29FE3F0400B62032 /* ParticleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961F69929FE3F0400B62032 /* ParticleEffect.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		095D96342A00B68200F27E8F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		095D96372A00BA6F00F27E8F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		095FEE4229FBA63000E3CFAE /* BaseRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoute.swift; sourceTree = "<group>"; };
 		0961F69729FE14E500B62032 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		0961F69929FE3F0400B62032 /* ParticleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEffect.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095D96362A00BA6400F27E8F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				095D96372A00BA6F00F27E8F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		095FEE4129FBA62000E3CFAE /* Route */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 		09B68B2E29FFDA2300809262 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				095D96362A00BA6400F27E8F /* Login */,
 				0961F69629FE14D600B62032 /* PostList */,
 				09D1FEE929F660BB00B65BBF /* Profile */,
 				09D1FEE829F660AE00B65BBF /* Bookmark */,
@@ -650,6 +661,7 @@
 				09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */,
 				09647B7529FA7E7600B763B5 /* ButtonSectionCore.swift in Sources */,
 				0961F69A29FE3F0400B62032 /* ParticleEffect.swift in Sources */,
+				095D96382A00BA6F00F27E8F /* LoginView.swift in Sources */,
 				09D1FEFC29F8EE7A00B65BBF /* NavigationBar.swift in Sources */,
 				09647B7129FA79B600B763B5 /* ShoutSimpleCell.swift in Sources */,
 				09647B7329FA79C200B763B5 /* WiseSayingSimpleCell.swift in Sources */,
