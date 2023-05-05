@@ -18,7 +18,7 @@ struct ButtonSectionView: View {
           viewStore.send(.routeAction(.myShout))
         } label: {
           HStack {
-            Text("나의 외침/명언")
+            Text("나의 각오/외침")
               .font(.system(size: 18))
               .fontWeight(.bold)
             Spacer()
@@ -38,8 +38,8 @@ struct ButtonSectionView: View {
           writeButton(
             imageName: "brand3D",
             imageColor: .green,
-            title: "외침",
-            description: "세상을 향해\n외치기"
+            title: "각오",
+            description: "오늘이\n각오 다지기"
           ) {
             viewStore.send(.routeAction(.writeShout))
           }
@@ -49,8 +49,8 @@ struct ButtonSectionView: View {
           writeButton(
             imageName: "bulb3D",
             imageColor: .blue,
-            title: "명언",
-            description: "나만의 띵언\n만들기"
+            title: "외침",
+            description: "나만의 외침\n만들기"
           ) {
             viewStore.send(.routeAction(.writeWiseSaying))
           }

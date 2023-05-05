@@ -17,7 +17,7 @@ struct PostListView: View {
           pageIdx = 0
         } label: {
           VStack(spacing: 12) {
-            Text("외침")
+            Text("각오")
               .font(.system(size: 18))
               .fontWeight(.bold)
               .foregroundColor(pageIdx == 0 ? .white : Color.dark500)
@@ -33,7 +33,7 @@ struct PostListView: View {
           pageIdx = 1
         } label: {
           VStack(spacing: 12) {
-            Text("명언")
+            Text("외침")
               .font(.system(size: 18))
               .fontWeight(.bold)
               .foregroundColor(pageIdx == 1 ? .white : Color.dark500)
@@ -95,7 +95,7 @@ struct PostListView: View {
             Button {
               
             } label: {
-              Text("외침 작성하기")
+              Text("각오 작성하기")
                 .font(.system(size: 14))
                 .fontWeight(.semibold)
             }
@@ -103,7 +103,7 @@ struct PostListView: View {
             Button {
               
             } label: {
-              Text("명언 제조하기")
+              Text("외침 제조하기")
                 .font(.system(size: 14))
                 .fontWeight(.semibold)
             }

@@ -11,12 +11,12 @@ struct LoginView: View {
   var body: some View {
     VStack(alignment: .center) {
       VStack(spacing: 8) {
-        Text("오늘을 향한 외침,")
+        Text("오늘을 향한 각오,")
           .multilineTextAlignment(.leading)
           .lineLimit(nil)
           .font(.system(size: 24))
           .fontWeight(.bold)
-        Text("내일을 위한 명언.")
+        Text("내일을 위한 외침.")
           .multilineTextAlignment(.leading)
           .lineLimit(nil)
           .font(.system(size: 24))

@@ -33,8 +33,8 @@ struct ProfileView: View {
       .padding(.vertical, 4)
       
       Section {
-        listRowView(imageName: "star", title: "저장한 외침/명언")
-        listRowView(imageName: "myPost", title: "내 외침/명언")
+        listRowView(imageName: "star", title: "저장한 각오/외침")
+        listRowView(imageName: "myPost", title: "내 각오/외침")
         listRowView(imageName: "userBlock", title: "차단유저")
       } header: {
         Text("관리")
