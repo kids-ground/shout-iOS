@@ -16,6 +16,42 @@ struct HomeView: View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
       ScrollView {
         LazyVStack {
+          
+          Section {
+            HStack {
+              Text("오늘 하루,\n나를 위한 각오는?")
+                .font(.system(size: 22))
+                .lineSpacing(8)
+                .fontWeight(.bold)
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+              
+              Spacer()
+              
+              Button {
+                
+              } label : {
+                Text("작성하기")
+                  .font(.system(size: 14))
+                  .fontWeight(.semibold)
+              }
+              .padding(.vertical, 8)
+              .padding(.horizontal, 12)
+              .background(.green)
+              .cornerRadius(16)
+              .foregroundColor(.white)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+          } header: {
+            Spacer().frame(height: 16)
+          } footer: {
+            Spacer().frame(height: 16)
+          }
+          .padding(.horizontal, 24)
+          .frame(maxWidth: .infinity, alignment: .leading)
+          
+          
           Section {
             ButtonSectionView(
               store: store.scope(

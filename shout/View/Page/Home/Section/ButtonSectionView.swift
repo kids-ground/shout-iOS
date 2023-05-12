@@ -39,7 +39,7 @@ struct ButtonSectionView: View {
             imageName: "brand3D",
             imageColor: .green,
             title: "각오",
-            description: "오늘이\n각오 다지기"
+            description: "오늘의\n각오 다지기"
           ) {
             viewStore.send(.routeAction(.writeShout))
           }
