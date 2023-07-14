@@ -10,6 +10,8 @@ target 'shout' do
 
   # Pods for shout
   pod 'ComposableArchitecture'
+  pod 'KakaoSDKUser'
+  pod 'KakaoSDKAuth'
 
   target 'shoutTests' do
     inherit! :search_paths

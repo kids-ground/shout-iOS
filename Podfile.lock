@@ -2,6 +2,7 @@ PODS:
   - _SwiftUINavigationState (0.4.2):
     - CasePaths
     - CustomDump
+  - Alamofire (5.7.1)
   - CasePaths (0.10.1)
   - Clocks (0.2.0):
     - XCTestDynamicOverlay
@@ -23,11 +24,24 @@ PODS:
     - XCTestDynamicOverlay
   - IdentifiedCollections (0.5.0):
     - OrderedCollections
+  - KakaoSDKAuth (2.16.0):
+    - KakaoSDKCommon (= 2.16.0)
+  - KakaoSDKCommon (2.16.0):
+    - KakaoSDKCommon/Common (= 2.16.0)
+    - KakaoSDKCommon/Network (= 2.16.0)
+  - KakaoSDKCommon/Common (2.16.0)
+  - KakaoSDKCommon/Network (2.16.0):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.16.0)
+  - KakaoSDKUser (2.16.0):
+    - KakaoSDKAuth (= 2.16.0)
   - OrderedCollections (1.0.4)
   - XCTestDynamicOverlay (0.6.0)
 
 DEPENDENCIES:
   - ComposableArchitecture
+  - KakaoSDKAuth
+  - KakaoSDKUser
 
 SPEC REPOS:
   https://github.com/kids-ground/tca-podspecs.git:
@@ -41,10 +55,15 @@ SPEC REPOS:
     - IdentifiedCollections
     - XCTestDynamicOverlay
   trunk:
+    - Alamofire
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
     - OrderedCollections
 
 SPEC CHECKSUMS:
   _SwiftUINavigationState: 22305fc02db8d2dc7f1d3f696a1799bec14fa658
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   CasePaths: deb1826520958a4c36daf0953aada4a3f4fd0d10
   Clocks: 6afed84ef7848b1278bcd0acf9bb638b3fd92132
   CombineSchedulers: dc36b0ef40e74d636c7beb87301c5d829495ce5b
@@ -52,9 +71,12 @@ SPEC CHECKSUMS:
   ComposableArchitectureDependencies: 04f3ec52768a0cf0fe4a2cca5d11027817f9cfe4
   CustomDump: f8e162466bfac992cf059de159fad85aa59cde49
   IdentifiedCollections: a52a8c45768e0bda9efb3b0eb7b686d1037d4c86
+  KakaoSDKAuth: 1b85ed7c41b0517bfd1fc9dc46c292c75b8cb610
+  KakaoSDKCommon: d6579aa2e9d963d74e13d741cbf1cce48b8b0c17
+  KakaoSDKUser: 427e5b3884abd19ee6d9a7bd6e3f3029eb2968b8
   OrderedCollections: c754ce5f9e42cf22b73afd73582317347903ab6d
   XCTestDynamicOverlay: 1349e196f84912ad6dc3067ea2bd3c9528ee7b15
 
-PODFILE CHECKSUM: ce894ef2b53589701be833dbdf8665ba852ff0c9
+PODFILE CHECKSUM: 609754ec6e5471b3dd3a77cf88932a6f4c373f01
 
 COCOAPODS: 1.12.1
