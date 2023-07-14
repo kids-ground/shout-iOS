@@ -7,6 +7,8 @@
 
 import SwiftUI
 import ComposableArchitecture
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 struct MainView: View {
   let store: StoreOf<MainCore>
@@ -72,7 +74,12 @@ struct MainView: View {
           get: \.showLoginView,
           send: MainCore.Action.loginViewDismiss)
         ) {
-          LoginView()
+          LoginView(
+            store: store.scope(
+              state: \.loginState,
+              action: MainCore.Action.loginAction
+            )
+          )
         }
       }
     }
