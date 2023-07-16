@@ -35,13 +35,23 @@ PODS:
     - KakaoSDKCommon/Common (= 2.16.0)
   - KakaoSDKUser (2.16.0):
     - KakaoSDKAuth (= 2.16.0)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/ReactiveSwift (15.0.0):
+    - Moya/Core
+    - ReactiveSwift (~> 6.6.1)
   - OrderedCollections (1.0.4)
+  - ReactiveSwift (6.6.1)
   - XCTestDynamicOverlay (0.6.0)
 
 DEPENDENCIES:
   - ComposableArchitecture
   - KakaoSDKAuth
   - KakaoSDKUser
+  - Moya/Combine (~> 15.0)
+  - Moya/ReactiveSwift (~> 15.0)
 
 SPEC REPOS:
   https://github.com/kids-ground/tca-podspecs.git:
@@ -59,7 +69,9 @@ SPEC REPOS:
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
+    - Moya
     - OrderedCollections
+    - ReactiveSwift
 
 SPEC CHECKSUMS:
   _SwiftUINavigationState: 22305fc02db8d2dc7f1d3f696a1799bec14fa658
@@ -74,9 +86,11 @@ SPEC CHECKSUMS:
   KakaoSDKAuth: 1b85ed7c41b0517bfd1fc9dc46c292c75b8cb610
   KakaoSDKCommon: d6579aa2e9d963d74e13d741cbf1cce48b8b0c17
   KakaoSDKUser: 427e5b3884abd19ee6d9a7bd6e3f3029eb2968b8
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   OrderedCollections: c754ce5f9e42cf22b73afd73582317347903ab6d
+  ReactiveSwift: fab34244ad908808dc822bae352a058c8837c4ca
   XCTestDynamicOverlay: 1349e196f84912ad6dc3067ea2bd3c9528ee7b15
 
-PODFILE CHECKSUM: 609754ec6e5471b3dd3a77cf88932a6f4c373f01
+PODFILE CHECKSUM: 071a8634c2420f7bf5ff9e8983645fecaa49b2a5
 
 COCOAPODS: 1.12.1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090419122A6404490091C293 /* MoyaProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090419112A6404490091C293 /* MoyaProvider+Extension.swift */; };
 		095D96352A00B68200F27E8F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D96342A00B68200F27E8F /* HapticManager.swift */; };
 		095D96382A00BA6F00F27E8F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D96372A00BA6F00F27E8F /* LoginView.swift */; };
 		095FEE4329FBA63000E3CFAE /* BaseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095FEE4229FBA63000E3CFAE /* BaseRoute.swift */; };
@@ -20,6 +21,10 @@
 		09647B7129FA79B600B763B5 /* ShoutSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B7029FA79B600B763B5 /* ShoutSimpleCell.swift */; };
 		09647B7329FA79C200B763B5 /* WiseSayingSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B7229FA79C200B763B5 /* WiseSayingSimpleCell.swift */; };
 		09647B7529FA7E7600B763B5 /* ButtonSectionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09647B7429FA7E7600B763B5 /* ButtonSectionCore.swift */; };
+		09AE97492A611E1800CCC83E /* LoginCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE97482A611E1800CCC83E /* LoginCore.swift */; };
+		09AE97512A61A42A00CCC83E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE97502A61A42A00CCC83E /* UserService.swift */; };
+		09AE97582A61A51C00CCC83E /* LoginRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE97572A61A51C00CCC83E /* LoginRequestDto.swift */; };
+		09AE975B2A61A5A300CCC83E /* MemberResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AE975A2A61A5A300CCC83E /* MemberResponseDto.swift */; };
 		09B0D6A729F4FB4100DA08C3 /* shoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */; };
 		09B0D6AB29F4FB4200DA08C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B0D6AA29F4FB4200DA08C3 /* Assets.xcassets */; };
 		09B0D6AE29F4FB4200DA08C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B0D6AD29F4FB4200DA08C3 /* Preview Assets.xcassets */; };
@@ -64,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090419112A6404490091C293 /* MoyaProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Extension.swift"; sourceTree = "<group>"; };
 		095D96342A00B68200F27E8F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		095D96372A00BA6F00F27E8F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		095FEE4229FBA63000E3CFAE /* BaseRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoute.swift; sourceTree = "<group>"; };
@@ -77,6 +83,12 @@
 		09647B7029FA79B600B763B5 /* ShoutSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutSimpleCell.swift; sourceTree = "<group>"; };
 		09647B7229FA79C200B763B5 /* WiseSayingSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseSayingSimpleCell.swift; sourceTree = "<group>"; };
 		09647B7429FA7E7600B763B5 /* ButtonSectionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSectionCore.swift; sourceTree = "<group>"; };
+		09AE97482A611E1800CCC83E /* LoginCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCore.swift; sourceTree = "<group>"; };
+		09AE974B2A612E9900CCC83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		09AE974C2A615A8200CCC83E /* shout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shout.entitlements; sourceTree = "<group>"; };
+		09AE97502A61A42A00CCC83E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		09AE97572A61A51C00CCC83E /* LoginRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDto.swift; sourceTree = "<group>"; };
+		09AE975A2A61A5A300CCC83E /* MemberResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberResponseDto.swift; sourceTree = "<group>"; };
 		09B0D6A329F4FB4100DA08C3 /* shout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B0D6A629F4FB4100DA08C3 /* shoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoutApp.swift; sourceTree = "<group>"; };
 		09B0D6AA29F4FB4200DA08C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,10 +152,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090419102A6401DD0091C293 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				09AE97502A61A42A00CCC83E /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		095D96362A00BA6400F27E8F /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				095D96372A00BA6F00F27E8F /* LoginView.swift */,
+				09AE97482A611E1800CCC83E /* LoginCore.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -208,6 +229,41 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		09AE974A2A611EA300CCC83E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				090419102A6401DD0091C293 /* Service */,
+				09AE97522A61A47D00CCC83E /* Dto */,
+				090419112A6404490091C293 /* MoyaProvider+Extension.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		09AE97522A61A47D00CCC83E /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				09AE97592A61A59600CCC83E /* Member */,
+				09AE97562A61A50C00CCC83E /* Auth */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		09AE97562A61A50C00CCC83E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				09AE97572A61A51C00CCC83E /* LoginRequestDto.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		09AE97592A61A59600CCC83E /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				09AE975A2A61A5A300CCC83E /* MemberResponseDto.swift */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
 		09B0D69A29F4FB4100DA08C3 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +289,9 @@
 		09B0D6A529F4FB4100DA08C3 /* shout */ = {
 			isa = PBXGroup;
 			children = (
+				09AE974C2A615A8200CCC83E /* shout.entitlements */,
+				09AE974B2A612E9900CCC83E /* Info.plist */,
+				09AE974A2A611EA300CCC83E /* Domain */,
 				09D1FEDE29F541E400B65BBF /* View */,
 				09D1FEDD29F53D0500B65BBF /* Resource */,
 				09D1FED829F53BF900B65BBF /* Common */,
@@ -654,13 +713,18 @@
 				09D1FEF829F7B55500B65BBF /* TabBarItem.swift in Sources */,
 				09D1FEFE29F90B1200B65BBF /* HomeCore.swift in Sources */,
 				09D1FEF629F6C40D00B65BBF /* TabBarCore.swift in Sources */,
+				09AE975B2A61A5A300CCC83E /* MemberResponseDto.swift in Sources */,
 				09D1FEF229F66AC800B65BBF /* RoundedCornerShape.swift in Sources */,
 				095D96352A00B68200F27E8F /* HapticManager.swift in Sources */,
+				09AE97512A61A42A00CCC83E /* UserService.swift in Sources */,
 				09D1FEE729F65E8B00B65BBF /* TabBarView.swift in Sources */,
 				09D1FEEB29F6610900B65BBF /* ProfileView.swift in Sources */,
 				09647B6829FA682D00B763B5 /* ButtonSectionView.swift in Sources */,
+				090419122A6404490091C293 /* MoyaProvider+Extension.swift in Sources */,
 				09647B7529FA7E7600B763B5 /* ButtonSectionCore.swift in Sources */,
 				0961F69A29FE3F0400B62032 /* ParticleEffect.swift in Sources */,
+				09AE97492A611E1800CCC83E /* LoginCore.swift in Sources */,
+				09AE97582A61A51C00CCC83E /* LoginRequestDto.swift in Sources */,
 				095D96382A00BA6F00F27E8F /* LoginView.swift in Sources */,
 				09D1FEFC29F8EE7A00B65BBF /* NavigationBar.swift in Sources */,
 				09647B7129FA79B600B763B5 /* ShoutSimpleCell.swift in Sources */,
@@ -823,12 +887,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = shout/shout.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"shout/Preview Content\"";
 				DEVELOPMENT_TEAM = 35Z5L89946;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = shout/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "외침";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -856,12 +922,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = shout/shout.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"shout/Preview Content\"";
 				DEVELOPMENT_TEAM = 35Z5L89946;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = shout/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "외침";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

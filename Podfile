@@ -12,6 +12,8 @@ target 'shout' do
   pod 'ComposableArchitecture'
   pod 'KakaoSDKUser'
   pod 'KakaoSDKAuth'
+  pod 'Moya/ReactiveSwift', '~> 15.0'
+  pod 'Moya/Combine', '~> 15.0'
 
   target 'shoutTests' do
     inherit! :search_paths
