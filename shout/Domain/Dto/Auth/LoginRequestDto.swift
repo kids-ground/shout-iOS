@@ -14,5 +14,5 @@ enum OAuthType: String, Codable {
 
 struct LoginRequestDto: Encodable {
   let token: String
-  let oAuthType: OAuthType
+  let oauthType: OAuthType
 }

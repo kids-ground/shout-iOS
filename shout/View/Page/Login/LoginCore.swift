@@ -56,9 +56,9 @@ struct LoginCore: ReducerProtocol {
         guard let token = kakaoAccessToken else { return .failureKakaoLogin(message: "토큰 없음") }
         return .fetchSignUp(oAuthType: .KAKAO, token: token)
       }
-    case let .fetchSignUp(oAuthType, token):
+    case let .fetchSignUp(oauthType, token):
       return .task {
-        let request = LoginRequestDto(token: token, oAuthType: oAuthType)
+        let request = LoginRequestDto(token: token, oauthType: oauthType)
         let result = await userService.request(.login(requst: request))
 
         switch result {

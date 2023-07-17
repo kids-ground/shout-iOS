@@ -86,6 +86,7 @@ struct LoginView: View {
                   print("애플 로그인 실패 - identityToken 직렬화")
                   return
                 }
+                viewStore.send(.fetchSignUp(oAuthType: .APPLE, token: identityToken))
                 
                 print("애플 로그인 성공 - \(identityToken)")
               case .failure(let error):
